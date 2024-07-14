@@ -30,14 +30,14 @@ model = keras.models.load_model(destination)
 # Class names mapping
 class_names = [
     'Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_rust', 'Apple___healthy',
-    'Blueberry___healthy', 'Cherry_(including_sour)___Powdery_mildew', 'Cherry_(including_sour)___healthy',
+    'Blueberry___healthy',
     'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot', 'Corn_(maize)___Common_rust_', 
     'Corn_(maize)___Northern_Leaf_Blight', 'Corn_(maize)___healthy', 'Grape___Black_rot', 
     'Grape___Esca_(Black_Measles)', 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 'Grape___healthy', 
-    'Orange___Haunglongbing_(Citrus_greening)', 'Peach___Bacterial_spot', 'Peach___healthy', 
+   
     'Pepper,_bell___Bacterial_spot', 'Pepper,_bell___healthy', 'Potato___Early_blight', 'Potato___Late_blight', 
-    'Potato___healthy', 'Raspberry___healthy', 'Soybean___healthy', 'Squash___Powdery_mildew', 
-    'Strawberry___Leaf_scorch', 'Strawberry___healthy', 'Tomato___Bacterial_spot', 'Tomato___Early_blight', 
+    'Potato___healthy', 
+     'Tomato___Bacterial_spot', 'Tomato___Early_blight', 
     'Tomato___Late_blight', 'Tomato___Leaf_Mold', 'Tomato___Septoria_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 
     'Tomato___Target_Spot', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Tomato___Tomato_mosaic_virus', 'Tomato___healthy'
 ]
@@ -68,16 +68,7 @@ disease_info = {
         'treatment': 'No treatment is needed for a healthy plant.',
         'prevention': 'Maintain good horticultural practices, including proper watering, fertilization, and pruning. Regularly inspect plants for signs of disease or pests and take early action if needed.'
     },
-    'Cherry_(including_sour)___Powdery_mildew': {
-        'description': 'Powdery mildew is a fungal disease caused by Podosphaera clandestina. It affects the leaves, stems, and fruit of cherry trees, causing a white, powdery coating on the surfaces. Severe infections can lead to leaf distortion and reduced fruit quality.',
-        'treatment': 'Apply fungicides at the first sign of infection. Remove and destroy infected leaves and fruit. Prune trees to improve air circulation, which helps reduce the humidity that favors fungal growth.',
-        'prevention': 'Ensure good air circulation around trees by proper spacing and pruning. Avoid overhead irrigation, which can increase humidity. Plant resistant varieties to reduce susceptibility.'
-    },
-    'Cherry_(including_sour)___healthy': {
-        'description': 'A healthy cherry plant shows no visible signs of disease. Leaves are green and free of spots or lesions, and fruit develops normally without blemishes.',
-        'treatment': 'No treatment is needed for a healthy plant.',
-        'prevention': 'Maintain good horticultural practices, including proper watering, fertilization, and pruning. Regularly inspect plants for signs of disease or pests and take early action if needed.'
-    },
+   
     'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot': {
         'description': 'Gray leaf spot is a fungal disease of maize caused by Cercospora zeae-maydis. It causes rectangular, grayish lesions on the leaves, which can coalesce and lead to extensive leaf blight. Severe infections can reduce photosynthetic capacity and yield.',
         'treatment': 'Apply fungicides at the first sign of infection. Use resistant hybrids to reduce susceptibility. Remove and destroy infected crop residues to reduce inoculum levels.',
@@ -118,21 +109,7 @@ disease_info = {
         'treatment': 'No treatment is needed for a healthy plant.',
         'prevention': 'Maintain good horticultural practices, including proper watering, fertilization, and pruning. Regularly inspect plants for signs of disease or pests and take early action if needed.'
     },
-    'Orange___Haunglongbing_(Citrus_greening)': {
-        'description': 'Citrus greening is a bacterial disease caused by Candidatus Liberibacter species. It causes yellowing of the leaves, premature fruit drop, and misshapen fruit with bitter taste. There is no cure for the disease.',
-        'treatment': 'Remove and destroy infected trees to prevent the spread of the disease. Control the Asian citrus psyllid vector with insecticides.',
-        'prevention': 'Use disease-free planting material and regularly monitor for signs of the disease. Implement control measures for the Asian citrus psyllid vector, including insecticides and biological control agents.'
-    },
-    'Peach___Bacterial_spot': {
-        'description': 'Bacterial spot is caused by Xanthomonas campestris pv. pruni. It causes small, water-soaked lesions on the leaves and fruit, which can coalesce and cause extensive damage in severe cases.',
-        'treatment': 'Apply bactericides at the first sign of infection. Remove and destroy infected leaves and fruit. Prune trees to improve air circulation, which helps reduce the humidity that favors bacterial growth.',
-        'prevention': 'Use resistant varieties to reduce susceptibility. Avoid overhead irrigation, which can increase humidity. Regularly monitor trees for early signs of the disease and take early action.'
-    },
-    'Peach___healthy': {
-        'description': 'A healthy peach plant shows no visible signs of disease. Leaves are green and free of spots or lesions, and fruit develops normally without blemishes.',
-        'treatment': 'No treatment is needed for a healthy plant.',
-        'prevention': 'Maintain good horticultural practices, including proper watering, fertilization, and pruning. Regularly inspect plants for signs of disease or pests and take early action if needed.'
-    },
+   
     'Pepper,_bell___Bacterial_spot': {
         'description': 'Bacterial spot is caused by Xanthomonas campestris pv. vesicatoria. It causes small, water-soaked lesions on the leaves and fruit, which can coalesce and cause extensive damage in severe cases.',
         'treatment': 'Apply bactericides at the first sign of infection. Remove and destroy infected leaves and fruit. Prune plants to improve air circulation, which helps reduce the humidity that favors bacterial growth.',
@@ -158,31 +135,7 @@ disease_info = {
         'treatment': 'No treatment is needed for a healthy plant.',
         'prevention': 'Maintain good horticultural practices, including proper watering, fertilization, and pest management. Regularly inspect plants for signs of disease or pests and take early action if needed.'
     },
-    'Raspberry___healthy': {
-        'description': 'A healthy raspberry plant shows no visible signs of disease. Leaves are green and free of spots or lesions, and fruit develops normally without blemishes.',
-        'treatment': 'No treatment is needed for a healthy plant.',
-        'prevention': 'Maintain good horticultural practices, including proper watering, fertilization, and pruning. Regularly inspect plants for signs of disease or pests and take early action if needed.'
-    },
-    'Soybean___healthy': {
-        'description': 'A healthy soybean plant shows no visible signs of disease. Leaves are green and free of spots or lesions, and plants develop normally with no stunted growth.',
-        'treatment': 'No treatment is needed for a healthy plant.',
-        'prevention': 'Maintain good horticultural practices, including proper watering, fertilization, and pest management. Regularly inspect plants for signs of disease or pests and take early action if needed.'
-    },
-    'Squash___Powdery_mildew': {
-        'description': 'Powdery mildew is a fungal disease caused by Erysiphe cichoracearum and Sphaerotheca fuliginea. It causes a white, powdery coating on the leaves and stems, which can lead to leaf distortion and reduced fruit quality in severe cases.',
-        'treatment': 'Apply fungicides at the first sign of infection. Remove and destroy infected leaves. Ensure good air circulation around plants by proper spacing and pruning.',
-        'prevention': 'Avoid overhead irrigation, which can increase humidity. Plant resistant varieties to reduce susceptibility. Regularly monitor plants for early signs of the disease and take early action.'
-    },
-    'Strawberry___Leaf_scorch': {
-        'description': 'Leaf scorch of strawberry is caused by the fungus Diplocarpon earliana. It causes small, dark purple spots on the leaves, which can coalesce and cause extensive leaf blight in severe cases.',
-        'treatment': 'Apply fungicides at the first sign of infection. Remove and destroy infected leaves. Ensure good air circulation around plants by proper spacing and pruning.',
-        'prevention': 'Plant resistant varieties to reduce susceptibility. Avoid overhead irrigation, which can increase humidity. Regularly monitor plants for early signs of the disease and take early action.'
-    },
-    'Strawberry___healthy': {
-        'description': 'A healthy strawberry plant shows no visible signs of disease. Leaves are green and free of spots or lesions, and fruit develops normally without blemishes.',
-        'treatment': 'No treatment is needed for a healthy plant.',
-        'prevention': 'Maintain good horticultural practices, including proper watering, fertilization, and pruning. Regularly inspect plants for signs of disease or pests and take early action if needed.'
-    },
+   
     'Tomato___Bacterial_spot': {
         'description': 'Bacterial spot is caused by Xanthomonas species. It causes small, water-soaked lesions on the leaves and fruit, which can coalesce and cause extensive damage in severe cases.',
         'treatment': 'Apply bactericides at the first sign of infection. Remove and destroy infected leaves and fruit. Prune plants to improve air circulation, which helps reduce the humidity that favors bacterial growth.',
