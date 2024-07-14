@@ -39,7 +39,9 @@ class_names = [
     'Potato___healthy', 
      'Tomato___Bacterial_spot', 'Tomato___Early_blight', 
     'Tomato___Late_blight', 'Tomato___Leaf_Mold', 'Tomato___Septoria_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 
-    'Tomato___Target_Spot', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Tomato___Tomato_mosaic_virus', 'Tomato___healthy'
+    'Tomato___Target_Spot', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Tomato___Tomato_mosaic_virus', 'Tomato___healthy',
+     'Tea___white spot', 'Tea___Anthracnose', 'Tea___healthy', 'Tea___bird eye spot', 'Tea___brown blight',
+    'Tea___red leaf spot', 'Tea___gray light', 'Tea___algal leaf'
 ]
 
 disease_info = {
@@ -185,6 +187,46 @@ disease_info = {
         'description': 'A healthy tomato plant shows no visible signs of disease. Leaves are green and free of spots or lesions, and fruit develops normally without blemishes.',
         'treatment': 'No treatment is needed for a healthy plant.',
         'prevention': 'Maintain good horticultural practices, including proper watering, fertilization, and pest management. Regularly inspect plants for signs of disease or pests and take early action if needed.'
+    },
+     'Tea___white spot': {
+        'description': 'White spot on tea leaves is caused by various fungal pathogens, leading to small, white spots on the leaf surface.',
+        'treatment': 'Apply fungicides and ensure proper pruning and spacing to improve air circulation.',
+        'prevention': 'Maintain good field hygiene, avoid overhead irrigation, and remove infected plant debris.'
+    },
+    'Tea___Anthracnose': {
+        'description': 'Anthracnose is a fungal disease caused by Colletotrichum species. It appears as dark, sunken lesions on the leaves, stems, and fruit.',
+        'treatment': 'Use fungicides and remove infected plant parts.',
+        'prevention': 'Ensure good air circulation, avoid overhead irrigation, and practice crop rotation.'
+    },
+    'Tea___healthy': {
+        'description': 'Healthy tea plant with no visible signs of disease.',
+        'treatment': 'No treatment needed.',
+        'prevention': 'Maintain good horticultural practices.'
+    },
+    'Tea___bird eye spot': {
+        'description': 'Bird eye spot is a fungal disease caused by Cercospora theae. It appears as small, circular spots with a gray center and dark brown border on the leaves.',
+        'treatment': 'Apply fungicides and remove infected leaves.',
+        'prevention': 'Improve air circulation and avoid overhead irrigation.'
+    },
+    'Tea___brown blight': {
+        'description': 'Brown blight is a fungal disease caused by Colletotrichum camelliae. It appears as brown, necrotic lesions on the leaves and stems.',
+        'treatment': 'Apply fungicides and remove infected plant parts.',
+        'prevention': 'Ensure good air circulation, avoid overhead irrigation, and practice crop rotation.'
+    },
+    'Tea___red leaf spot': {
+        'description': 'Red leaf spot is a fungal disease caused by Phyllosticta theae. It appears as red spots on the leaves, which can coalesce and cause significant leaf damage.',
+        'treatment': 'Apply fungicides and remove infected leaves.',
+        'prevention': 'Ensure good air circulation, avoid overhead irrigation, and remove crop debris.'
+    },
+    'Tea___gray light': {
+        'description': 'Gray light is a fungal disease caused by Pseudocercospora theae. It appears as grayish lesions on the leaves, leading to reduced photosynthesis and plant vigor.',
+        'treatment': 'Apply fungicides and remove infected leaves.',
+        'prevention': 'Ensure good air circulation, avoid overhead irrigation, and remove crop debris.'
+    },
+    'Tea___algal leaf': {
+        'description': 'Algal leaf spot is caused by Cephaleuros virescens, an algal pathogen. It appears as green to orange-red spots on the leaves, which can coalesceto form larger lesions, affecting the overall health and productivity of the tea plant.',
+        'treatment': 'Apply copper-based fungicides and prune affected areas to reduce humidity around the plants.',
+        'prevention': 'Maintain good field hygiene, ensure adequate spacing between plants to improve air circulation, and avoid overhead irrigation.'
     }
 }
 
